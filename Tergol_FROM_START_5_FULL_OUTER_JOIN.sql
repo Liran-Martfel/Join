@@ -1,11 +1,11 @@
 SELECT *
 FROM drivers d
-FULL OUTER JOIN cars c ON d.id = c.id;
+FULL OUTER JOIN cars c ON d.car_id = c.id;
 
 SELECT *
 FROM drivers d
 FULL OUTER JOIN cars c ON d.car_id = c.id
-WHERE c.id is NULL;
+WHERE c.id is NULL or d.id IS NULL;
 
 SELECT 
 	name AS driver_name,
